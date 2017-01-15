@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import com.albertlardizabal.JokeCenter;
 import com.albertlardizabal.androidjokelibrary.JokeActivity;
 import com.albertlardizabal.androidjokelibrary.JokeComposer;
 
@@ -42,12 +44,16 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-//        JokeCenter jokeCenter = new JokeCenter();
-//        String joke = jokeCenter.getJoke();
+    public void showJokeToast(View view) {
+        JokeCenter jokeCenter = new JokeCenter();
+        String joke = jokeCenter.getJoke();
+
+        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+    }
+
+    public void showJokeActivity(View view) {
         JokeComposer jokeComposer = new JokeComposer();
         String joke = jokeComposer.grabJoke();
-//        Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, JokeActivity.class);
         intent.putExtra("joke", joke);

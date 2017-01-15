@@ -15,14 +15,26 @@
         android:layout_height="wrap_content"
         android:text="@string/instructions" />
 
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/instructions_text_view"
-        android:onClick="tellJoke"
-        android:text="@string/button_text"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_below="@+id/instructions_text_view">
 
-        />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showJokeToast"
+            android:text="@string/button_java_text" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showJokeActivity"
+            android:text="@string/button_android_text" />
+
+    </LinearLayout>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
