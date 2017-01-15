@@ -31,8 +31,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="showJokeActivity"
+            android:onClick="showLocalJokeActivity"
             android:text="@string/button_android_text" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="showRemoteJokeActivity"
+            android:text="@string/button_remote_joke_text" />
 
     </LinearLayout>
 
