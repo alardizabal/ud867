@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.albertlardizabal.JokeCenter;
@@ -17,12 +18,15 @@ import com.albertlardizabal.androidjokelibrary.JokeComposer;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ProgressBar spinner;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        spinner = (ProgressBar)findViewById(R.id.progressBar1);
+        spinner.setVisibility(View.GONE);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

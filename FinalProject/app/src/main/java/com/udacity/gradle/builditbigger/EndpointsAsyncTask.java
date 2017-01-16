@@ -56,6 +56,7 @@ public class EndpointsAsyncTask extends AsyncTask<Pair<Context, String>, Void, S
 
     @Override
     protected void onPostExecute(String result) {
+
         JokeComposer jokeComposer = new JokeComposer();
         String joke = jokeComposer.grabJoke();
 

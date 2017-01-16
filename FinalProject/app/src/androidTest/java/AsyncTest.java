@@ -3,6 +3,8 @@ import android.test.ApplicationTestCase;
 
 import com.albertlardizabal.androidjokelibrary.JokeComposer;
 
+import org.junit.Test;
+
 /**
  * Created by albertlardizabal on 1/15/17.
  */
@@ -11,6 +13,7 @@ public class AsyncTest extends ApplicationTestCase<Application> {
 
     public AsyncTest() { super(Application.class); }
 
+    @Test
     public void testAsyncTask() {
         try {
             JokeComposer jokeComposer = new JokeComposer();
